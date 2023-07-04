@@ -121,3 +121,11 @@ print("Root Mean Squared Error: ", rmse)
 print("R^2: ", r2)
 print("Percentage Mean Absolute Error: ", mapedf)
 print("__________________________________________________________________")
+
+
+fig = px.line(df1,
+              x="Datetime",
+              y="PowerConsumption_Zone1",
+              labels = {'Datetime':'PowerConsumption_Zone1'},
+              title = "График  прогнозирования потребления энергии")
+fig.show()
