@@ -65,3 +65,29 @@ fig = px.line(df,
               labels = {'Datetime':'PowerConsumption_Zone1'},
               title = "График потребления энергии")
 fig.show()
+
+import xgboost as xgb
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Define the features and target variable     "Отопление",
+features = ["Temperature", "Humidity", "WindSpeed", "GeneralDiffuseFlows", "DiffuseFlows", "PowerConsumption_Zone1"]
+target = "PowerConsumption_Zone1"
+
+# Train an XGBoost model
+xgb_model = xgb.XGBRegressor(
+    objective='reg:squarederror',
+    learning_rate=0.02,
+    max_depth=6,
+    subsample=0.9,
+    colsample_bytree=1,
+    n_estimators=6000,
+    random_state=42
+)
+
+xgb_model.fit(train_df[features], train_df[target])
+xgb_preds = xgb_model.predict(test_df[features])
+print(xgb_preds)
+print("\n")
+print(test_df[target])
