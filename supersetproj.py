@@ -30,3 +30,26 @@ fig = px.line(df,
               labels = {'Datetime':'Temperature'},
               title = "График температуры")
 fig.show()
+
+
+#база данных
+df = pd.read_csv("powerconsumption.csv")
+df1 = pd.read_excel("pow1.xlsx")
+fig = px.line(df,
+x="Datetime",
+y="Humidity",
+labels = {'Datetime':'Humidity'},
+title = "График влажности")
+fig.show()
+fig = px.line(df,
+x="Datetime",
+y="WindSpeed",
+labels = {'Datetime':'WindSpeed'},
+title = "График скорости ветра")
+fig.show()
+fig = px.line(df,
+x="Datetime",
+y="PowerConsumption_Zone1",
+labels = {'Datetime':'PowerConsumption_Zone1'},
+title = "График потребления энергии")
+fig.show()
