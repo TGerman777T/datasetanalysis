@@ -17,3 +17,8 @@ import datetime as dt
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.figure_factory as ff
+
+
+#база данных
+df = pd.read_csv("powerconsumption.csv")
+df1 = pd.read_excel("pow1.xlsx")
