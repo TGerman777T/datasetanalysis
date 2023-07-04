@@ -1,1 +1,8 @@
-# datasetanalysis
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/d381870a-1316-4f85-b86d-39aa2c0bd9a8)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/bb9af7c7-2957-44e0-bf67-ced7fdd25dd3)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/b7ab87c3-fd8f-40de-a82f-ca0e43803c41)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/df7758de-70d2-4752-8ec4-cab6fd2fde6f)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/01786a7c-94a5-457a-9a7d-2cbd2f5339ec)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/987dfe06-cb71-4185-bad6-132b79b1eddf)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/e9d76ba4-e0e7-4135-a65e-c516c9866f4f)
+![image](https://github.com/TGerman777T/datasetanalysis/assets/47473290/925ce5b1-03c3-4190-8b91-596fdb2c7897)
