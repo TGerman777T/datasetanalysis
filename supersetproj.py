@@ -91,3 +91,14 @@ xgb_preds = xgb_model.predict(test_df[features])
 print(xgb_preds)
 print("\n")
 print(test_df[target])
+
+
+next_24_hours_X = df1[["Temperature", "Humidity", "WindSpeed", "GeneralDiffuseFlows", "DiffuseFlows", "PowerConsumption_Zone1"]]
+# Make predictions using the model
+next_24_hours_preds = xgb_model.predict(next_24_hours_X)
+
+# Add the predicted values to the original dataframe
+df1["PowerConsumption_Zone1"] = next_24_hours_preds.flatten()
+
+# Write the updated data to the same excel file
+df1.to_excel("PredictData.xlsx", index=False)
