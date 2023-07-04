@@ -102,3 +102,22 @@ df1["PowerConsumption_Zone1"] = next_24_hours_preds.flatten()
 
 # Write the updated data to the same excel file
 df1.to_excel("PredictData.xlsx", index=False)
+
+data = pd.read_excel("pow1.xlsx")
+datapredict = pd.read_excel("PredictData.xlsx")
+mapedf = np.mean(np.abs((data["PowerConsumption_Zone1"] - datapredict["PowerConsumption_Zone1"]) / data["PowerConsumption_Zone1"])) * 100
+mape = np.mean(np.abs((test_df[target] - xgb_preds) / test_df[target])) * 100
+mae = mean_absolute_error(test_df[target], xgb_preds)
+mse = mean_squared_error(test_df[target], xgb_preds)
+rmse = np.sqrt(mse)
+r2 = r2_score(test_df[target], xgb_preds)
+
+print("Метрики работы модели:")
+print("__________________________________________________________________")
+print("Model Percentage Mean Absolute Error: ", mape)
+print("Mean Absolute Error: ", mae)
+print("Mean Squared Error: ", mse)
+print("Root Mean Squared Error: ", rmse)
+print("R^2: ", r2)
+print("Percentage Mean Absolute Error: ", mapedf)
+print("__________________________________________________________________")
